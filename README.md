@@ -1,1 +1,2 @@
-# polar-template
+# polar-templates
+Scrt contracts templates

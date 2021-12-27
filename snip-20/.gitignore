@@ -1,0 +1,4 @@
+artifacts
+contracts/target
+schema
+node_modules
