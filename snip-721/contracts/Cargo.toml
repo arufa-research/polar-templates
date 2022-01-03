@@ -1,5 +1,5 @@
 [package]
-name = "snip20-reference-impl"
+name = "snip-721"
 version = "0.1.0"
 authors = ["Itzik <itzik@keytango.io>"]
 edition = "2018"
