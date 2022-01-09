@@ -2,20 +2,39 @@ const { Contract, getAccountByName } = require("secret-polar");
 
 async function run () {
   const contract_owner = getAccountByName("account_0");
-  const contract = new Contract('factorial');
+  const contract = new Contract("factorial");
   await contract.parseSchema();
 
-  const deploy_response = await contract.deploy(contract_owner);
+  const deploy_response = await contract.deploy(
+    contract_owner,
+    { // custom fees
+      amount: [{ amount: "750000", denom: "uscrt" }],
+      gas: "3000000",
+    }
+  );
   console.log(deploy_response);
 
-  const contract_info = await contract.instantiate({"factorial": 1}, "deploy test", contract_owner);
+  const contract_info = await contract.instantiate({"factorial": 0}, "factorial test 1", contract_owner);
   console.log(contract_info);
 
-  const ex_response = await contract.tx.factorial(5, contract_owner);
-  console.log(ex_response);
+  const inc_response = await contract.tx.factorial({account: contract_owner}, 4);
+  console.log(inc_response);
 
   const response = await contract.query.get_factorial();
   console.log(response);
+
+  const transferAmount = [{"denom": "uscrt", "amount": "15000000"}] // 15 SCRT
+  const customFees = { // custom fees
+    amount: [{ amount: "750000", denom: "uscrt" }],
+    gas: "3000000",
+  }
+  const ex_response = await contract.tx.factorial(
+    {account: contract_owner}, 3
+  );
+  // const ex_response = await contract.tx.increment(
+  //   {account: contract_owner, transferAmount: transferAmount, customFees: customFees}
+  // );
+  console.log(ex_response);
 }
 
 module.exports = { default: run };
