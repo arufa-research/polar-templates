@@ -30,10 +30,10 @@ module.exports = {
       keyringBackend: 'test',
       types: {}
     },
-    // Pulsar Testnet
+    // Supernova Testnet
     testnet: {
-      endpoint: "http://testnet.securesecrets.org:26657",
-      chainId: "pulsar-1",
+      endpoint: 'http://bootstrap.supernova.enigma.co:1317',
+      chainId: 'supernova-2',
       trustNode: true,
       keyringBackend: 'test',
       accounts: accounts,
