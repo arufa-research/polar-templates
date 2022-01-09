@@ -2,19 +2,7 @@ const { Contract, getAccountByName } = require("secret-polar");
 
 async function run () {
   const contract_owner = getAccountByName("account_0");
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  const contract = new Contract('counter');
-=======
-  const contract = new Contract("sample-project");
->>>>>>> Stashed changes
-=======
-  const contract = new Contract("sample-project");
->>>>>>> Stashed changes
-=======
-  const contract = new Contract("sample-project");
->>>>>>> Stashed changes
+  const contract = new Contract("counter");
   await contract.parseSchema();
 
   const deploy_response = await contract.deploy(
@@ -26,7 +14,7 @@ async function run () {
   );
   console.log(deploy_response);
 
-  const contract_info = await contract.instantiate({"count": 102}, "deploy test 42re5", contract_owner);
+  const contract_info = await contract.instantiate({"count": 102}, "deploy test", contract_owner);
   console.log(contract_info);
 
   const inc_response = await contract.tx.increment({account: contract_owner});

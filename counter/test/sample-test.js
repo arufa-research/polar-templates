@@ -7,7 +7,7 @@ describe("sample_project", () => {
   async function setup() {
     const contract_owner = getAccountByName("account_1");
     const other = getAccountByName("account_0");
-    const contract = new Contract("sample-project");
+    const contract = new Contract("counter");
     await contract.parseSchema();
 
     return { contract_owner, other, contract };
