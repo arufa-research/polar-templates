@@ -4,7 +4,11 @@ async function run () {
   const contract_owner = getAccountByName("account_0");
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const contract = new Contract('counter');
+=======
+  const contract = new Contract("sample-project");
+>>>>>>> Stashed changes
 =======
   const contract = new Contract("sample-project");
 >>>>>>> Stashed changes
