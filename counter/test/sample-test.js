@@ -3,7 +3,7 @@ const { Contract, getAccountByName, polarChai } = require("secret-polar");
 
 use(polarChai);
 
-describe("sample_project", () => {
+describe("counter", () => {
   async function setup() {
     const contract_owner = getAccountByName("account_1");
     const other = getAccountByName("account_0");
