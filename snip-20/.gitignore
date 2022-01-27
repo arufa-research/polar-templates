@@ -1,4 +1,4 @@
 artifacts
-contracts/target
+target
 schema
 node_modules
