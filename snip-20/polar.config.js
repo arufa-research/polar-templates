@@ -41,7 +41,7 @@ const networks = {
     fees: {
       upload: {
           amount: [{ amount: "5000000", denom: "uscrt" }],
-          gas: "2000000",
+          gas: "4000000",
       },
       init: {
           amount: [{ amount: "125000", denom: "uscrt" }],
@@ -84,7 +84,7 @@ module.exports = {
     development: networks.development
   },
   mocha: {
-    timeout: 60000
+    timeout: 18000000
   },
   rust: {
     version: "nightly-2020-12-31",
