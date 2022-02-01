@@ -1,5 +1,4 @@
 const { expect, use } = require("chai");
-const { fromUtf8 } = require("@iov/encoding");
 const { Contract, getAccountByName, polarChai } = require("secret-polar");
 
 use(polarChai);
