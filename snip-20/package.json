@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
+    "@iov/encoding": "^2.5.0",
     "@types/chai": "^4.3.0",
     "chai": "^4.3.4",
     "secret-polar": "^0.9.5"
